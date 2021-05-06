@@ -401,13 +401,16 @@ Dr. Richard Hamming
         </div>
 
         <!-- Scripts -->
+        
         <script>
+            // Typing Tutorial Source: https://usefulangle.com/post/75/typing-effect-animation-javascript-css
+            
             // List of sentences
             var _CONTENT = [ 
-                "I am a programmer.", 
-                "I am a web designer.", 
-                "I am a student.", 
-                "I am a teamplayer."
+                "I am a programmer. " , 
+                "I am a web designer. ", 
+                "I am a student. ", 
+                "I am a teamplayer. "
             ];
 
             var START_INDEX = 5;
@@ -437,8 +440,25 @@ Dr. Richard Hamming
 
                 // If full sentence has been displayed then start to delete the sentence after some time
                 if(text === _CONTENT[_PART]) {
+                    emoji = "😃";
+                    switch (_PART) {
+                        case 0:
+                            emoji = "⌨";
+                            break;
+                        case 1:
+                            emoji = "💻";
+                            break;
+                        case 2:
+                            emoji = "👨‍🎓";
+                            break;
+                        case 3:
+                            emoji = "🤝";
+                            break;
+                            
+                    }
+                    _ELEMENT.innerHTML = text + emoji;
                     // Hide the cursor
-                    _CURSOR.style.display = 'none';
+                    //_CURSOR.style.display = 'none';
 
                     clearInterval(_INTERVAL_VAL);
                     setTimeout(function() {
