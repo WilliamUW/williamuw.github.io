@@ -12,7 +12,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <style>
-            
+
             img {
                 max-width: 11em;
                 max-height: 10em;
@@ -89,7 +89,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
             }
             @keyframes bgcolor {
-                
+
                 30% {
                     background-color: #45a3e5
                 }
@@ -111,7 +111,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 }
             }
 
-  
+
             body {
                 background-image: url("empty");
                 -webkit-animation: bgcolor 10s infinite;
@@ -131,8 +131,13 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <header id="header" class="alt">
                 <span class="logo"><img src="images/headshot.JPG" alt="" /></span>
                 <h1>William Wang</h1>
-                <p>Software Developer <br />
-                    Github <a href="https://github.com/williamuw">@williamuw</a></p>
+                <h1><div id="container">
+                    <div id="text"></div>
+                    <div id="cursor"></div>
+                </div></h1>
+                <!--
+<p>Software Developer <br />
+Github <a href="https://github.com/williamuw">@williamuw</a></p>-->
             </header>
 
             <!-- Nav -->
@@ -215,7 +220,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                             </header>
                             <h3>I see the tremendous potential for technological innovation that will take place in my lifetime, and I hope to be a part of that revolution.  
                                 <br><br>
-                                
+
                                 Whether that is using machine learning to detect diseases like cancer or searching for the missing flight MH370 through image recognition,  I hope to unlock the full potential of both human and machine to play to their strengths and achieve greatness together.</h3>
                         </div> <span class="image right"><img style="height: 20em; width: 20em" src="images/Hour_of_Code.jpg" alt="" /></span>
                     </div>
@@ -271,7 +276,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                         </li>
                         <li class="style5">
                             <a href="https://williamuw.github.io/MrGooseCollection/"><button class="button-hover"><img 
-                                src="images/lineup.PNG"/></button></a>
+                                                                                                                       src="images/lineup.PNG"/></button></a>
 
                             <br/><br/>
 
@@ -396,6 +401,82 @@ Dr. Richard Hamming
         </div>
 
         <!-- Scripts -->
+        <script>
+            // List of sentences
+            var _CONTENT = [ 
+                "I am a programmer.", 
+                "I am a web designer.", 
+                "I am a student.", 
+                "I am a teamplayer."
+            ];
+
+            var START_INDEX = 5;
+            var WAIT_INTERVAL = 1500;
+            // Current sentence being processed
+            var _PART = 0;
+
+            // Character number of the current sentence being processed 
+            var _PART_INDEX = START_INDEX;
+
+            // Holds the handle returned from setInterval
+            var _INTERVAL_VAL;
+
+            // Element that holds the text
+            var _ELEMENT = document.querySelector("#text");
+
+            // Cursor element 
+            var _CURSOR = document.querySelector("#cursor");
+
+            // Implements typing effect
+            function Type() { 
+                // Get substring with 1 characater added
+                var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+                _ELEMENT.innerHTML = text;
+                _PART_INDEX++;
+
+                // If full sentence has been displayed then start to delete the sentence after some time
+                if(text === _CONTENT[_PART]) {
+                    // Hide the cursor
+                    _CURSOR.style.display = 'none';
+
+                    clearInterval(_INTERVAL_VAL);
+                    setTimeout(function() {
+                        _INTERVAL_VAL = setInterval(Delete, 50);
+                    }, WAIT_INTERVAL);
+                }
+            }
+
+            // Implements deleting effect
+            function Delete() {
+                // Get substring with 1 characater deleted
+                var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+                _ELEMENT.innerHTML = text;
+                _PART_INDEX--;
+
+                // If sentence has been deleted then start to display the next sentence
+                if(text === 'I am') {
+                    clearInterval(_INTERVAL_VAL);
+
+                    // If current sentence was last then display the first one, else move to the next
+                    if(_PART == (_CONTENT.length - 1))
+                        _PART = 0;
+                    else
+                        _PART++;
+
+                    _PART_INDEX = START_INDEX;
+
+                    // Start to display the next sentence after some time
+                    setTimeout(function() {
+                        //_CURSOR.style.display = 'inline-block';
+                        _INTERVAL_VAL = setInterval(Type, 100);
+                    }, 200);
+                }
+            }
+
+            // Start the typing effect on load
+            _INTERVAL_VAL = setInterval(Type, 100);
+
+        </script>
         <script src="assets/js/jquery.min.js"></script>
         <script src="assets/js/jquery.scrollex.min.js"></script>
         <script src="assets/js/jquery.scrolly.min.js"></script>
