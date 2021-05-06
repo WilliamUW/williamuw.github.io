@@ -12,6 +12,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
         <style>
+            
             img {
                 max-width: 11em;
                 max-height: 10em;
@@ -86,6 +87,37 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                 background-color: #2c2e36;
                 border-radius: 17px;
 
+            }
+            @keyframes bgcolor {
+                
+                30% {
+                    background-color: #45a3e5
+                }
+
+                50% {
+                    background-color: #66bf39
+                }
+
+                80% {
+                    background-color: #eb670f
+                }
+
+                90% {
+                    background-color: #f35
+                }
+
+                100% {
+                    background-color: #864cbf
+                }
+            }
+
+  
+            body {
+                background-image: url("empty");
+                -webkit-animation: bgcolor 10s infinite;
+                animation: bgcolor 10s infinite;
+                -webkit-animation-direction: alternate;
+                animation-direction: alternate;
             }
         </style>
     </head>
