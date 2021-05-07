@@ -440,11 +440,14 @@ Dr. Richard Hamming
                 "I am a programmer. " , 
                 "I am a web designer. ", 
                 "I am a Computer Science student. ", 
-                "I am a teamplayer. "
+                "I am a teamplayer. ",
+                "I am a stock market enthusiast. "
             ];
 
             var START_INDEX = 5;
-            var WAIT_INTERVAL = 1500;
+            var WAIT_INTERVAL = 1000;
+            var TYPE_VAL = 100;
+            var DELETE_VAL = 35;
 
             // Current sentence being processed
             var _PART = 0;
@@ -484,6 +487,9 @@ Dr. Richard Hamming
                         case 3:
                             emoji = "🤝";
                             break;
+                        case 4:
+                            emoji = "📈";
+                            break;
 
                     }
                     _ELEMENT.innerHTML = text + emoji;
@@ -492,7 +498,7 @@ Dr. Richard Hamming
 
                     clearInterval(_INTERVAL_VAL);
                     setTimeout(function() {
-                        _INTERVAL_VAL = setInterval(Delete, 50);
+                        _INTERVAL_VAL = setInterval(Delete, DELETE_VAL);
                     }, WAIT_INTERVAL);
                 }
             }
@@ -519,7 +525,7 @@ Dr. Richard Hamming
                     // Start to display the next sentence after some time
                     setTimeout(function() {
                         //_CURSOR.style.display = 'inline-block';
-                        _INTERVAL_VAL = setInterval(Type, 100);
+                        _INTERVAL_VAL = setInterval(Type, TYPE_VAL);
                     }, 200);
                 }
             }
