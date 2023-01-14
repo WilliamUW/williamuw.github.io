@@ -95,43 +95,42 @@ scene.add(william);
 william.position.z = -3;
 william.position.x = 0;
 
-const william2 = new THREE.Mesh(
-  new THREE.BoxGeometry(1, 1, 1),
-  new THREE.MeshBasicMaterial({ map: williamTexture })
+const earthTexture = new THREE.TextureLoader().load("earth.jpg");
+const normalTexture = new THREE.TextureLoader().load("normal.jpg");
+const moonTexture = new THREE.TextureLoader().load("moon.jpg");
+const marsTexture = new THREE.TextureLoader().load("mars.jpg");
+
+const moon = new THREE.Mesh(
+  new THREE.SphereGeometry(1, 32, 32),
+  new THREE.MeshBasicMaterial({ map: moonTexture, texture: normalTexture })
 );
 
-scene.add(william2);
+scene.add(moon);
 
-william2.position.z = 0;
-william2.position.x = 0;
+moon.position.z = 0;
+moon.position.x = 0;
 
 const william3 = new THREE.Mesh(
-  new THREE.BoxGeometry(1, 1, 1),
-  new THREE.MeshBasicMaterial({ map: williamTexture })
+  new THREE.SphereGeometry(10, 32, 32),
+  new THREE.MeshBasicMaterial({ map: marsTexture, texture: normalTexture })
 );
 
 scene.add(william3);
 
-william3.position.z = 5;
-william3.position.x = 2;
+william3.position.z = -3;
+william3.position.x = 5;
 
 // earth
 
-const earthTexture = new THREE.TextureLoader().load("earth.jpg");
-const normalTexture = new THREE.TextureLoader().load("normal.jpg");
-
 const earth = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
-  new THREE.MeshStandardMaterial({
-    map: earthTexture
-  })
+  new THREE.MeshStandardMaterial({ map: earthTexture })
 );
 
 scene.add(earth);
 
 earth.position.z = -5;
 earth.position.setX(-10);
-
 
 // Scroll Animation
 
@@ -144,8 +143,8 @@ function moveCamera() {
   william.rotation.y += 0.01;
   william.rotation.z += 0.01;
 
-  william2.rotation.y += 0.01;
-  william2.rotation.z += 0.01;
+  moon.rotation.y += 0.01;
+  moon.rotation.z += 0.01;
 
   william3.rotation.y += 0.01;
   william3.rotation.z += 0.01;
@@ -171,6 +170,8 @@ function animate() {
   torus.rotation.z += 0.01;
 
   earth.rotation.y += 0.005;
+
+  moon.rotation.y += 0.005;
 
   // controls.update();
 
