@@ -71,7 +71,7 @@ const spaceTexture = new THREE.TextureLoader().load("/space.jpg");
 scene.background = spaceTexture;
 
 const williamTexture = new THREE.TextureLoader().load("/william.JPG");
-const waterlooTexture = new THREE.TextureLoader().load("images/UW_seal.png");
+const waterlooTexture = new THREE.TextureLoader().load("/UW_seal.png");
 
 // Avatar
 
