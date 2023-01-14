@@ -14,7 +14,7 @@ const camera = new THREE.PerspectiveCamera(
 );
 
 const renderer = new THREE.WebGLRenderer({
-  canvas: document.querySelector("#bg")
+  canvas: document.querySelector("#bg"),
 });
 
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -68,16 +68,49 @@ Array(200).fill().forEach(addStar);
 const spaceTexture = new THREE.TextureLoader().load("space.jpg");
 scene.background = spaceTexture;
 
-// Avatar
-
 const williamTexture = new THREE.TextureLoader().load("william.JPG");
 
+// Avatar
+
+const william4 = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1),
+  new THREE.MeshBasicMaterial({ map: williamTexture })
+);
+
+scene.add(william4);
+
+william4.position.z = -10;
+william4.position.x = 4;
+
 const william = new THREE.Mesh(
-  new THREE.BoxGeometry(3, 3, 3),
+  new THREE.BoxGeometry(1, 1, 1),
   new THREE.MeshBasicMaterial({ map: williamTexture })
 );
 
 scene.add(william);
+
+william.position.z = -5;
+william.position.x = -2;
+
+const william2 = new THREE.Mesh(
+  new THREE.BoxGeometry(2, 2, 2),
+  new THREE.MeshBasicMaterial({ map: williamTexture })
+);
+
+scene.add(william2);
+
+william2.position.z = 0;
+william2.position.x = 0;
+
+const william3 = new THREE.Mesh(
+  new THREE.BoxGeometry(3, 3, 3),
+  new THREE.MeshBasicMaterial({ map: williamTexture })
+);
+
+scene.add(william3);
+
+william3.position.z = 5;
+william3.position.x = 2;
 
 // Moon
 
@@ -88,7 +121,7 @@ const moon = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({
     map: moonTexture,
-    normalMap: normalTexture
+    normalMap: normalTexture,
   })
 );
 
@@ -96,9 +129,6 @@ scene.add(moon);
 
 moon.position.z = 30;
 moon.position.setX(-10);
-
-william.position.z = -5;
-william.position.x = 2;
 
 // Scroll Animation
 
@@ -110,6 +140,12 @@ function moveCamera() {
 
   william.rotation.y += 0.01;
   william.rotation.z += 0.01;
+
+  william2.rotation.y += 0.01;
+  william2.rotation.z += 0.01;
+
+  william3.rotation.y += 0.01;
+  william3.rotation.z += 0.01;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
