@@ -1,253 +1,283 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <!--
 Coded by William Wang
 Template: Stellar by HTML5 UP
 -->
 <html>
-
-<head>
+  <head>
     <title>William Wang | Venture Capital Intern @ BDC</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
     <link rel="icon" type="image/png" href="images/natureicon.jpg" />
-    <meta property='og:title' content='My Personal Website' />
-    <meta property='og:image' content='//williamuw.github.io/images/preview.png'>
-    <meta property='og:image:alt' content='Website Preview'>
-    <meta property='og:description' content='The personal website and portfolio of William Wang' />
-    <meta property='og:url' content='//williamuw.github.io/' />
+    <meta property="og:title" content="My Personal Website" />
+    <meta
+      property="og:image"
+      content="//williamuw.github.io/images/preview.png"
+    />
+    <meta property="og:image:alt" content="Website Preview" />
+    <meta
+      property="og:description"
+      content="The personal website and portfolio of William Wang"
+    />
+    <meta property="og:url" content="//williamuw.github.io/" />
     <meta name="robots" content="noindex" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript>
-        <link rel="stylesheet" href="assets/css/noscript.css" />
+      <link rel="stylesheet" href="assets/css/noscript.css" />
     </noscript>
     <style>
-        img {
-            max-width: 11em;
-            max-height: 10em;
+      img {
+        max-width: 11em;
+        max-height: 10em;
+      }
+
+      .linked_images {
+        width: 3em;
+        height: 3em;
+        margin-right: 0.5em;
+        /* margin-left: 0.5em; */
+      }
+
+      .icon_images {
+        width: 2.5em;
+        height: 2.5em;
+        margin-right: 1em;
+        border-radius: 50%;
+      }
+
+      .button-hover {
+        position: relative;
+        min-width: 200px;
+        margin: 1em;
+        padding: 1.5em;
+        background: linear-gradient(to right, #56ccf2, #2f80ed);
+        border: 0;
+        cursor: pointer;
+        border-radius: 20px;
+      }
+
+      .button-hover::before,
+      .button-hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(to right, #56ccf2, #2f80ed);
+        border-radius: 20px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .button-hover:hover::before {
+        filter: blur(5px);
+      }
+
+      .button-hover:hover::after {
+        filter: blur(15px);
+      }
+
+      .button-hover:hover {
+        animation: hue 3s linear infinite;
+      }
+
+      @keyframes hue {
+        0% {
+          filter: hue-rotate(0deg);
         }
 
-        .linked_images {
-            width: 3em;
-            height: 3em;
-            margin-right: 0.5em;
-            /* margin-left: 0.5em; */
+        100% {
+          filter: hue-rotate(360deg);
+        }
+      }
+
+      .button-hover img {
+        position: relative;
+        z-index: 3;
+        display: block;
+        font-family: "Montserrat", sans-serif;
+        font-size: 2em;
+        font-weight: bold;
+        color: white;
+        background-color: #2c2e36;
+        border-radius: 17px;
+      }
+
+      .button-hover span {
+        position: relative;
+        z-index: 3;
+        display: block;
+        padding: 0.5em;
+        font-family: "Montserrat", sans-serif;
+        font-size: 2em;
+        font-weight: bold;
+        color: white;
+        background-color: #2c2e36;
+        border-radius: 17px;
+      }
+
+      @keyframes bgcolor {
+        30% {
+          background-color: #45a3e5;
         }
 
-        .icon_images {
-            width: 2.5em;
-            height: 2.5em;
-            margin-right: 1em;
-            border-radius: 50%;
+        50% {
+          background-color: #66bf39;
         }
 
-        .button-hover {
-            position: relative;
-            min-width: 200px;
-            margin: 1em;
-            padding: 1.5em;
-            background: linear-gradient(to right, #56ccf2, #2f80ed);
-            border: 0;
-            cursor: pointer;
-            border-radius: 20px;
-
+        80% {
+          background-color: #eb670f;
         }
 
-        .button-hover::before,
-        .button-hover::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 0;
-            background: linear-gradient(to right, #56ccf2, #2f80ed);
-            border-radius: 20px;
-            transition: all .5s ease-in-out;
+        90% {
+          background-color: #f35;
         }
 
-        .button-hover:hover::before {
-            filter: blur(5px);
+        100% {
+          background-color: #864cbf;
         }
+      }
 
-        .button-hover:hover::after {
-            filter: blur(15px);
-        }
+      body {
+        background-image: url("empty");
+        -webkit-animation: bgcolor 10s infinite;
+        animation: bgcolor 10s infinite;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+      }
 
-        .button-hover:hover {
-            animation: hue 3s linear infinite;
-        }
-
-        @keyframes hue {
-            0% {
-                filter: hue-rotate(0deg);
-            }
-
-            100% {
-                filter: hue-rotate(360deg);
-            }
-        }
-
-        .button-hover img {
-            position: relative;
-            z-index: 3;
-            display: block;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2em;
-            font-weight: bold;
-            color: white;
-            background-color: #2c2e36;
-            border-radius: 17px;
-        }
-
-        .button-hover span {
-            position: relative;
-            z-index: 3;
-            display: block;
-            padding: 0.5em;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2em;
-            font-weight: bold;
-            color: white;
-            background-color: #2c2e36;
-            border-radius: 17px;
-
-        }
-
-        @keyframes bgcolor {
-
-            30% {
-                background-color: #45a3e5
-            }
-
-            50% {
-                background-color: #66bf39
-            }
-
-            80% {
-                background-color: #eb670f
-            }
-
-            90% {
-                background-color: #f35
-            }
-
-            100% {
-                background-color: #864cbf
-            }
-        }
-
-
-        body {
-            background-image: url("empty");
-            -webkit-animation: bgcolor 10s infinite;
-            animation: bgcolor 10s infinite;
-            -webkit-animation-direction: alternate;
-            animation-direction: alternate;
-        }
-
-        strong {
-            font-size: 0.5em;
-        }
+      strong {
+        font-size: 0.5em;
+      }
     </style>
-</head>
+  </head>
 
-<body class="is-preload">
-
-    <!-- Wrapper -->
-    <div id="wrapper">
-
+  <body class="is-preload">
+    <canvas id="bg"></canvas>
+    
+    <main>
+      <!-- Wrapper -->
+      <div id="wrapper">
         <!-- Header -->
         <header id="header" class="alt">
-            <div>
-                <a href="https://github.com/williamuw"><img class="linked_images" src="images/github.png">
-                </a>
-                <a href="https://linkedin.com/in/williamuw"><img class="linked_images"
-                        src="images/method-draw-image.svg">
-                </a>
-                <a href="https://bn.william.w@gmail.com"><img class="linked_images" src="images/gmail.png">
-                </a>
+          <div>
+            <a href="https://github.com/williamuw"
+              ><img class="linked_images" src="images/github.png" />
+            </a>
+            <a href="https://linkedin.com/in/williamuw"
+              ><img class="linked_images" src="images/method-draw-image.svg" />
+            </a>
+            <a href="https://bn.william.w@gmail.com"
+              ><img class="linked_images" src="images/gmail.png" />
+            </a>
+          </div>
+
+          <br />
+          <span class="logo"
+            ><img
+              style="border-radius: 50%"
+              src="images/naturephotosquare.jpg"
+              alt="William Wang Profile Picture"
+          /></span>
+
+          <h1>Hi! I'm William</h1>
+          <h2>
+            🤝 VC Intern @BDC -
+            <a href="https://www.bdc.ca/en/bdc-capital/venture-capital"
+              >Canada’s largest venture capital investor</a
+            >
+          </h2>
+          <h3>
+            Prev Venture Capital Analyst @IBC Group -
+            <a href="https://ibcgroup.io/our-portfolio/">
+              Web3 VC Firm with 250+ investments</a
+            >
+          </h3>
+          <h3>
+            Prev @Snapcommerce -
+            <a
+              href="https://financialpost.com/pmn/press-releases-pmn/business-wire-news-releases-pmn/snapcommerce-ranks-5th-in-deloittes-2021-north-america-technology-fast-500-winners#:~:text=The%20company%2C%20based%20in%20both,entrepreneurial%20spirit%2C%20and%20bold%20innovation."
+              >Canada's fastest growing tech company</a
+            >
+          </h3>
+          <h3>
+            Prev @Somm.ai -
+            <a
+              href="https://www.forbes.com/pictures/61a67d8742bbf7cb5403d8c8/david-kong-29-founder-som/?sh=2ec411dc5942"
+              >Forbes 30 Under 30 2022</a
+            >
+          </h3>
+
+          <h1>
+            <div id="container">
+              <div id="text"></div>
+              <div id="cursor"></div>
             </div>
-
-            <br />
-            <span class="logo"><img style="border-radius: 50%;" src="images/naturephotosquare.jpg"
-                    alt="William Wang Profile Picture" /></span>
-
-            <h1>Hi! I'm William</h1>
-            <h2>🤝 VC Intern @BDC - <a href="https://www.bdc.ca/en/bdc-capital/venture-capital">Canada’s
-                    largest venture capital investor</a>
-            </h2>
-            <h3>Prev Venture Capital Analyst @IBC Group - <a
-                    href="https://ibcgroup.io/our-portfolio/">
-                    Web3 VC Firm with 250+ investments</a></h3>
-            <h3>Prev @Snapcommerce - <a
-                    href="https://financialpost.com/pmn/press-releases-pmn/business-wire-news-releases-pmn/snapcommerce-ranks-5th-in-deloittes-2021-north-america-technology-fast-500-winners#:~:text=The%20company%2C%20based%20in%20both,entrepreneurial%20spirit%2C%20and%20bold%20innovation.">Canada's
-                    fastest growing tech company</a>
-            </h3>
-            <h3>Prev @Somm.ai - <a
-                    href="https://www.forbes.com/pictures/61a67d8742bbf7cb5403d8c8/david-kong-29-founder-som/?sh=2ec411dc5942">Forbes
-                    30 Under 30 2022</a>
-            </h3>
-
-            <h1>
-                <div id="container">
-                    <div id="text"></div>
-                    <div id="cursor"></div>
-                </div>
-            </h1>
+          </h1>
         </header>
 
         <!-- Nav -->
         <nav id="nav">
-            <div>
-                <div style="float: left; display: table-cell">
-                    <div>
-                        <img class="icon_images" style="float: left" src="images/natureicon.jpg">
-                        <h2 style="float: right">William Wang</h2>
-                    </div>
-                </div>
-
-
-                <div style="float: right">
-
-                    <img class="icon_images" style="float: left" src="images/resumeicon.jpg">
-                    <a href="" style="float: right">
-                        <h2>My Résumé</h2>
-                    </a>
-                </div>
-                <div>
-                    <a href="https://github.com/williamuw"><img class="linked_images" src="images/github.png">
-                    </a>
-                    <a href="https://linkedin.com/in/williamuw"><img class="linked_images"
-                            src="images/method-draw-image.svg">
-                    </a>
-                    <a href="https://bn.william.w@gmail.com"><img class="linked_images" src="images/gmail.png">
-                    </a>
-                </div>
+          <div>
+            <div style="float: left; display: table-cell">
+              <div>
+                <img
+                  class="icon_images"
+                  style="float: left"
+                  src="images/natureicon.jpg"
+                />
+                <h2 style="float: right">William Wang</h2>
+              </div>
             </div>
 
-
-
+            <div style="float: right">
+              <img
+                class="icon_images"
+                style="float: left"
+                src="images/resumeicon.jpg"
+              />
+              <a href="" style="float: right">
+                <h2>My Résumé</h2>
+              </a>
+            </div>
             <div>
+              <a href="https://github.com/williamuw"
+                ><img class="linked_images" src="images/github.png" />
+              </a>
+              <a href="https://linkedin.com/in/williamuw"
+                ><img
+                  class="linked_images"
+                  src="images/method-draw-image.svg"
+                />
+              </a>
+              <a href="https://bn.william.w@gmail.com"
+                ><img class="linked_images" src="images/gmail.png" />
+              </a>
+            </div>
+          </div>
 
-                <ul>
-                    <li><a href="#intro" class="active">About Me</a></li>
-                    <li><a href="#skills">Technical Skills</a></li>
-                    <li><a href="#second">Side Projects</a></li>
-                    <!--
+          <div>
+            <ul>
+              <li><a href="#intro" class="active">About Me</a></li>
+              <li><a href="#skills">Technical Skills</a></li>
+              <li><a href="#second">Side Projects</a></li>
+              <!--
                         <li><a href="#first">Elevator Pitch</a></li>
 
 -->
 
-                    <li><a href="#cta">Interests</a></li>
-                    <!--<li><a href="#interests">Personal Interests</a></li>-->
-                </ul>
-            </div>
+              <li><a href="#cta">Interests</a></li>
+              <!--<li><a href="#interests">Personal Interests</a></li>-->
+            </ul>
+          </div>
         </nav>
 
         <!-- Main -->
         <div id="main">
-
-            <!-- <section id="first" class="main">
+          <!-- <section id="first" class="main">
 
                 <center>
                     <h1>My life goal is to improve the world through code.</h1>
@@ -276,119 +306,172 @@ Template: Stellar by HTML5 UP
                     </div> <span class="image right"><img style="height: 20em; width: 20em" src="images/Hour_of_Code.jpg" alt="" /></span>
                 </div>
             </section> -->
-            <!-- About me -->
-            <section id="intro" class="main special">
-                <header class="major">
-                    <h2>About Me</h2>
-                </header>
+          <!-- About me -->
+          <section id="intro" class="main special">
+            <header class="major">
+              <h2>About Me</h2>
+            </header>
 
-                <ul class="features" style="overflow: auto; ">
-                    <li>
-                        <!--<span class="icon solid major style1 fa-code"></span>-->
-                        <span class="image"><img src="images/UW_seal.png" alt="" /></span>
-                        <h1></h1>
+            <ul class="features" style="overflow: auto">
+              <li>
+                <!--<span class="icon solid major style1 fa-code"></span>-->
+                <span class="image"
+                  ><img src="images/UW_seal.png" alt=""
+                /></span>
+                <h1></h1>
 
-                        <h3>Waterloo Computer Science</h3>
-                        <p>Hi! I’m William, and I am in my 3rd year studying Computer Science at the University of
-                            Waterloo. My cumulative GPA is 3.94/4.0, and my fascination with computer science stems from
-                            my love for technology, data, as well as statistics. </p>
+                <h3>Waterloo Computer Science</h3>
+                <p>
+                  Hi! I’m William, and I am in my 3rd year studying Computer
+                  Science at the University of Waterloo. My cumulative GPA is
+                  3.94/4.0, and my fascination with computer science stems from
+                  my love for technology, data, as well as statistics.
+                </p>
 
-                        <p>Passionate, hardworking, adaptable. I am a teamplayer who is constantly self-learning and
-                            finding ways to improve. I love bringing new innovative ideas to life. </p>
-                    </li>
-                    <li>
-                        <!--<span class="icon major style3 fa-copy"></span>-->
-                        <span class="image"><img src="images/snapcommerce.png" alt="" /></span>
+                <p>
+                  Passionate, hardworking, adaptable. I am a teamplayer who is
+                  constantly self-learning and finding ways to improve. I love
+                  bringing new innovative ideas to life.
+                </p>
+              </li>
+              <li>
+                <!--<span class="icon major style3 fa-copy"></span>-->
+                <span class="image"
+                  ><img src="images/snapcommerce.png" alt=""
+                /></span>
 
-                        <br>
+                <br />
 
-                        <br>
-                        <h3 style="font-size: 1.18em">Software Engineer at <a
-                                href="https://uwaterloo.ca/news/global-impact/co-op-students-play-integral-role-canadas-fastest-growing"
-                                target="_blank">Snapcommerce</a></h3>
-                        <p>Back-end platform development across two verticals (Travel, Fin-Tech) at <a
-                                href="https://financialpost.com/pmn/press-releases-pmn/business-wire-news-releases-pmn/snapcommerce-ranks-5th-in-deloittes-2021-north-america-technology-fast-500-winners#:~:text=The%20company%2C%20based%20in%20both,entrepreneurial%20spirit%2C%20and%20bold%20innovation."
-                                target="_blank">Canada's fastest growing tech company</a> (<a
-                                href="https://www2.deloitte.com/us/en/pages/technology-media-and-telecommunications/articles/fast500-winners.html">5th
-                                in North America</a>)!
-
-                            Our platform engineering team owns Snapcommerce's search, booking, and fintech engines,
-                            tackling the most complex performance, scalability, and infrastructure backend challenges at
-                            the company. The engines handle 100+ million searches/day, ingest over 1TB/day of data and
-                            processes over $1MM/day in sales, while maintaining a 99.9+% uptime.
-                        </p>
-                        <!--
+                <br />
+                <h3 style="font-size: 1.18em">
+                  Software Engineer at
+                  <a
+                    href="https://uwaterloo.ca/news/global-impact/co-op-students-play-integral-role-canadas-fastest-growing"
+                    target="_blank"
+                    >Snapcommerce</a
+                  >
+                </h3>
+                <p>
+                  Back-end platform development across two verticals (Travel,
+                  Fin-Tech) at
+                  <a
+                    href="https://financialpost.com/pmn/press-releases-pmn/business-wire-news-releases-pmn/snapcommerce-ranks-5th-in-deloittes-2021-north-america-technology-fast-500-winners#:~:text=The%20company%2C%20based%20in%20both,entrepreneurial%20spirit%2C%20and%20bold%20innovation."
+                    target="_blank"
+                    >Canada's fastest growing tech company</a
+                  >
+                  (<a
+                    href="https://www2.deloitte.com/us/en/pages/technology-media-and-telecommunications/articles/fast500-winners.html"
+                    >5th in North America</a
+                  >)! Our platform engineering team owns Snapcommerce's search,
+                  booking, and fintech engines, tackling the most complex
+                  performance, scalability, and infrastructure backend
+                  challenges at the company. The engines handle 100+ million
+                  searches/day, ingest over 1TB/day of data and processes over
+                  $1MM/day in sales, while maintaining a 99.9+% uptime.
+                </p>
+                <!--
 <p>Feel free to take a look at my <a href="">resume</a>. I am constantly self-learning and finding ways to improve.</p>-->
-                    </li>
-                    <li>
-                        <!--<span class="icon solid major style1 fa-code"></span>-->
-                        <span class="image"><img src="images/ibcgroup.jpg" alt="" /></span>
-                        <h1></h1>
+              </li>
+              <li>
+                <!--<span class="icon solid major style1 fa-code"></span>-->
+                <span class="image"
+                  ><img src="images/ibcgroup.jpg" alt=""
+                /></span>
+                <h1></h1>
 
-                        <h3>Analyst at <a
-                                href="https://linkedin.com/company/ibc-group-comprehensive-blockchain-consulting/">IBC
-                                Group</a></h3>
-                        <p>I am working under IBC Group's Chief Strategy Officer to facilitate client interaction and
-                            deal flow for VC investments in the Web 3 and Blockchain space.
-                        </p>
-                        <p>Founded in 2017, IBC Group has been a pioneer of cutting-edge growth hacking principles in
-                            the
-                            crypto space for the last 5 years, and is one of the leading VC/Accelerator/Incubators in
-                            the space.
-                        </p>
-                    </li>
-                </ul>
-                <ul class="features" style="overflow: auto; ">
-                    <li>
-                        <!--<span class="icon major style3 fa-copy"></span>-->
-                        <span class="image"><img src="images/sommIconFullSize.png" alt="" /></span>
+                <h3>
+                  Analyst at
+                  <a
+                    href="https://linkedin.com/company/ibc-group-comprehensive-blockchain-consulting/"
+                    >IBC Group</a
+                  >
+                </h3>
+                <p>
+                  I am working under IBC Group's Chief Strategy Officer to
+                  facilitate client interaction and deal flow for VC investments
+                  in the Web 3 and Blockchain space.
+                </p>
+                <p>
+                  Founded in 2017, IBC Group has been a pioneer of cutting-edge
+                  growth hacking principles in the crypto space for the last 5
+                  years, and is one of the leading VC/Accelerator/Incubators in
+                  the space.
+                </p>
+              </li>
+            </ul>
+            <ul class="features" style="overflow: auto">
+              <li>
+                <!--<span class="icon major style3 fa-copy"></span>-->
+                <span class="image"
+                  ><img src="images/sommIconFullSize.png" alt=""
+                /></span>
 
-                        <br>
+                <br />
 
-                        <br>
-                        <h3>Software Engineer at <a href="https://somm.ai/">Somm.ai</a></h3>
-                        <p>At Somm <a href="https://www.forbes.com/profile/david-kong-1/?sh=57842c67e08c">(a Forbes 30
-                                Under 30 company)</a>, I reduced the search runtime by 300% for 13,000+ documents hosted
-                            on Somm.ai’s ElasticSearch deployment by optimizing the relevance tuning and recall settings
-                            for 50+ document fields. I saved 1,000+ hours and $20,000 in labor costs with maintainable
-                            and reusable Python scripts to automated the scraping of data for 80,000+ restaurants using
-                            the Yelp API and for streamlining ingestion of 6,700+ documents to AWS.
-
-                        </p>
-                        <!--
+                <br />
+                <h3>
+                  Software Engineer at <a href="https://somm.ai/">Somm.ai</a>
+                </h3>
+                <p>
+                  At Somm
+                  <a
+                    href="https://www.forbes.com/profile/david-kong-1/?sh=57842c67e08c"
+                    >(a Forbes 30 Under 30 company)</a
+                  >, I reduced the search runtime by 300% for 13,000+ documents
+                  hosted on Somm.ai’s ElasticSearch deployment by optimizing the
+                  relevance tuning and recall settings for 50+ document fields.
+                  I saved 1,000+ hours and $20,000 in labor costs with
+                  maintainable and reusable Python scripts to automated the
+                  scraping of data for 80,000+ restaurants using the Yelp API
+                  and for streamlining ingestion of 6,700+ documents to AWS.
+                </p>
+                <!--
 <p>Feel free to take a look at my <a href="">resume</a>. I am constantly self-learning and finding ways to improve.</p>-->
-                    </li>
-                    <li>
-                        <!--<span class="icon major style5 fa-gem"></span>-->
-                        <span class="image"><img src="images/white-stonkamlogo.png" alt="" /></span>
-                        <h1></h1>
-                        <h3>CES 2022 Exhibitor at <a href="https://www.stonkam.com/">STONKAM</a></h3>
-                        <p>Earlier this year, I represented STONKAM at CES 2022 Las Vegas
-                            where I pitched STONKAM's products and connected with 100+ CTOs, engineers, and
-                            executives from 50+ leading tech companies globally. STONKAM is the world's leading provider
-                            of vision
-                            solutions with over 19 years of history in the automotive electronics industry. STONKAM
-                            products are exported to more than 150 countries and regions around the world, with an
-                            export rate of 99%.
+              </li>
+              <li>
+                <!--<span class="icon major style5 fa-gem"></span>-->
+                <span class="image"
+                  ><img src="images/white-stonkamlogo.png" alt=""
+                /></span>
+                <h1></h1>
+                <h3>
+                  CES 2022 Exhibitor at
+                  <a href="https://www.stonkam.com/">STONKAM</a>
+                </h3>
+                <p>
+                  Earlier this year, I represented STONKAM at CES 2022 Las Vegas
+                  where I pitched STONKAM's products and connected with 100+
+                  CTOs, engineers, and executives from 50+ leading tech
+                  companies globally. STONKAM is the world's leading provider of
+                  vision solutions with over 19 years of history in the
+                  automotive electronics industry. STONKAM products are exported
+                  to more than 150 countries and regions around the world, with
+                  an export rate of 99%.
+                </p>
+              </li>
+              <li>
+                <!--<span class="icon major style5 fa-gem"></span>-->
+                <span class="image"
+                  ><img src="images/toolbxlogo.png" alt=""
+                /></span>
+                <h1></h1>
+                <h3>
+                  Software Engineer at <a href="http://toolbx.com/">TOOLBX</a>
+                </h3>
+                <p>
+                  I leveraged my Salesforce and Algolia API knowledge to
+                  centralize the organization’s metrics processing for 174,000+
+                  production products and 5,600+ Builder Claim Forms using SQL,
+                  SOQL, and Javascript in Retool. I also automated the contract
+                  creation process using my PandaDoc API knowledge, saving 95+
+                  minutes of manual data entry per bulk order, translating to
+                  $5000+ per month in labor cost savings.
+                </p>
+                <!--Through code and technology, I try to make my life and the lives of those around me better. You can check out some of my side projects on <a href="https://github.com/williamuw">Github</a>.-->
+              </li>
+            </ul>
 
-                    </li>
-                    <li>
-                        <!--<span class="icon major style5 fa-gem"></span>-->
-                        <span class="image"><img src="images/toolbxlogo.png" alt="" /></span>
-                        <h1></h1>
-                        <h3>Software Engineer at <a href="http://toolbx.com/">TOOLBX</a></h3>
-                        <p>I leveraged my Salesforce and Algolia API knowledge to centralize the organization’s metrics
-                            processing for 174,000+ production products and 5,600+ Builder Claim Forms using SQL, SOQL,
-                            and Javascript in Retool. I also automated the contract creation process using my PandaDoc
-                            API knowledge, saving 95+ minutes of manual data entry per bulk order, translating to $5000+
-                            per month in labor cost savings. </p>
-                        <!--Through code and technology, I try to make my life and the lives of those around me better. You can check out some of my side projects on <a href="https://github.com/williamuw">Github</a>.-->
-                    </li>
-
-
-                </ul>
-
-                <!-- 
+            <!-- 
                     <li>
                         <span class="icon solid major style1 fa-code"></span>
                         <span class="image"><img src="images/irly.png" alt="" /></span>
@@ -401,7 +484,7 @@ Template: Stellar by HTML5 UP
                     </li>
                 -->
 
-                <!-- Next 3 items:
+            <!-- Next 3 items:
 CES - Earlier this year, I represented STONKAM at CES 2022 Las Vegas from Jan 5th to 7th. There, I headed 30 live demonstrations of 3 camera systems and I synergized with a team of 3 CES reps to foster a receptive environment for 80 international clients at the STONKAM booth.
 
 Snapcommerce - Back-end development for Snapcommerce's upcoming Fin-Tech product. Super excited to be learning from and working with talent at Canada's fastest growing tech company (Deloitte Fast 50)!
@@ -419,81 +502,91 @@ CES
 
 
 -->
-                <!--
+            <!--
 <footer class="major">
 <ul class="actions special">
 <li><a href="generic.html" class="button">Learn More</a></li>
 </ul>
 </footer>
 -->
-            </section>
+          </section>
 
-            <!-- Technical Skills -->
-            <section id="skills" class="main special">
-                <header class="major">
-                    <h1>Technical Skills</h1>
-                    <h2></h2>
-                    <h4>Programming Languages:</h4>
-                    <h3>Python, Javascript, Typescript, Java, C, C++, SQL, R, Bash, PostgreSQL, SOQL, GraphQL
-                    </h3>
-                    <h4>Tools &amp; Technologies:</h4>
-                    <h3>ReactJS, React Native, HTML & CSS, OpenCV, Android Studios, Git, Retool, Algolia, Amplitude,
-                        Yarn, Node.JS, Expo
-                    </h3>
-                    <h4>Frameworks & APIs:</h4>
-                    <h3>REST, Salesforce, Finicity, Snowflake, Postman, Flask, Yelp, PandaDoc, Front, GeoGratis,
-                        Elastic.co, Kibana, Sikuli, Firebase, AWS
-                    </h3>
+          <!-- Technical Skills -->
+          <section id="skills" class="main special">
+            <header class="major">
+              <h1>Technical Skills</h1>
+              <h2></h2>
+              <h4>Programming Languages:</h4>
+              <h3>
+                Python, Javascript, Typescript, Java, C, C++, SQL, R, Bash,
+                PostgreSQL, SOQL, GraphQL
+              </h3>
+              <h4>Tools &amp; Technologies:</h4>
+              <h3>
+                ReactJS, React Native, HTML & CSS, OpenCV, Android Studios, Git,
+                Retool, Algolia, Amplitude, Yarn, Node.JS, Expo
+              </h3>
+              <h4>Frameworks & APIs:</h4>
+              <h3>
+                REST, Salesforce, Finicity, Snowflake, Postman, Flask, Yelp,
+                PandaDoc, Front, GeoGratis, Elastic.co, Kibana, Sikuli,
+                Firebase, AWS
+              </h3>
+            </header>
+          </section>
 
+          <!-- Side Projects -->
+          <section id="second" class="main special">
+            <header class="major">
+              <h2>Side Projects</h2>
+              <p>
+                Here are some of the projects I have been working on recently.
+                Feel free to take a look!
+              </p>
+            </header>
 
+            <ul class="statistics">
+              <li class="style1">
+                <a href="https://williamuw.github.io/AccommodateMeMrGoose/"
+                  ><button class="button-hover">
+                    <img src="images/accommodateme.PNG" /></button
+                ></a>
 
+                <br /><br />
 
+                <strong
+                  >I developed
+                  <a href="https://williamuw.github.io/AccommodateMeMrGoose/"
+                    >AccommodateMeMrGoose</a
+                  >, a website that helps First Year Waterloo students choose
+                  between the many University residences available according to
+                  their preferences. (E.g. Faculty, Meal Plan, Room Style,
+                  Features and Amenities, etc)
+                </strong>
+              </li>
+              <li class="style2">
+                <a href="https://williamuw.github.io/Engineering/"
+                  ><button class="button-hover">
+                    <img src="images/engineering.PNG" /></button
+                ></a>
 
-                </header>
+                <br /><br />
 
-            </section>
+                <strong
+                  >I created
+                  <a href="https://williamuw.github.io/Engineering/"
+                    >ChanceMeMrGoose</a
+                  >, a website that calculates an applicant's chances of
+                  receiving an offer to various Waterloo programs according to
+                  their admission information. I created this website to solve a
+                  need I had as an anxious Grade 12 student, and it has helped
+                  so many others who also wanted to make informed decisions
+                  about their desired program choices!
+                </strong>
+              </li>
+            </ul>
 
-            <!-- Side Projects -->
-            <section id="second" class="main special">
-                <header class="major">
-                    <h2>Side Projects</h2>
-                    <p>Here are some of the projects I have been working on recently. Feel free to take a look!</p>
-                </header>
-
-                <ul class="statistics">
-                    <li class="style1">
-                        <a href="https://williamuw.github.io/AccommodateMeMrGoose/"><button class="button-hover">
-                                <img src="images/accommodateme.PNG" /></button></a>
-
-                        <br /><br />
-
-                        <strong>I developed <a
-                                href="https://williamuw.github.io/AccommodateMeMrGoose/">AccommodateMeMrGoose</a>, a
-                            website that helps First Year Waterloo students choose between the many University
-                            residences available according to their preferences. (E.g. Faculty, Meal Plan, Room Style,
-                            Features and Amenities, etc) </strong>
-                    </li>
-                    <li class="style2">
-                        <a href="https://williamuw.github.io/Engineering/"><button class="button-hover"><img
-                                    src="images/engineering.PNG" /></button></a>
-
-                        <br /><br />
-
-                        <strong>I created <a href="https://williamuw.github.io/Engineering/">ChanceMeMrGoose</a>, a
-                            website that calculates an applicant's chances of receiving an offer to various Waterloo
-                            programs according to their
-                            admission information. I created this website to solve a need I had as an anxious Grade 12
-                            student, and it has helped so many others who also wanted to make informed decisions about
-                            their desired program choices!
-
-                        </strong>
-
-                    </li>
-                </ul>
-
-
-
-                <!-- <ul class="statistics">
+            <!-- <ul class="statistics">
                     <li class="style5">
                         <a href="https://williamuw.github.io/MrGooseCollection/"><button class="button-hover"><img
                                     src="images/lineup.PNG" /></button></a>
@@ -522,74 +615,75 @@ CES
 
                 </ul> -->
 
-                <ul class="statistics">
-                    <li class="style1">
-                        <a href="https://github.com/williamuw/PassNote/"><button class="button-hover"><img
-                                    src="images/passnote_screenshot.png" />
-                            </button>
-                        </a>
+            <ul class="statistics">
+              <li class="style1">
+                <a href="https://github.com/williamuw/PassNote/"
+                  ><button class="button-hover">
+                    <img src="images/passnote_screenshot.png" />
+                  </button>
+                </a>
 
-                        <br><br>
+                <br /><br />
 
-                        <strong>
-                            <a href="https://github.com/williamuw/PassNote/">PassNote</a> is an offline password manager
-                            I made with accessiblility and user-friendliness as a priority for my ICS4U7 culminating
-                            assignment and for my IB Higher Level CS Internal Assessment submission. Made in Java 8
-                            using the Java Swing API.
-                            <br>
-                            <br>
-                            <a href="https://youtu.be/j7zT3ZyTzqE">Click here if you would like to see the video
-                                documentation. (Youtube Link)</a> </strong>
-                    </li>
-                    <li class="style2">
-                        <a href="https://github.com/williamuw/openCVClashRoyale/"><button class="button-hover"><img
-                                    src="images/sikuliapi.png" />
-                            </button></a>
+                <strong>
+                  <a href="https://github.com/williamuw/PassNote/">PassNote</a>
+                  is an offline password manager I made with accessiblility and
+                  user-friendliness as a priority for my ICS4U7 culminating
+                  assignment and for my IB Higher Level CS Internal Assessment
+                  submission. Made in Java 8 using the Java Swing API.
+                  <br />
+                  <br />
+                  <a href="https://youtu.be/j7zT3ZyTzqE"
+                    >Click here if you would like to see the video
+                    documentation. (Youtube Link)</a
+                  >
+                </strong>
+              </li>
+              <li class="style2">
+                <a href="https://github.com/williamuw/openCVClashRoyale/"
+                  ><button class="button-hover">
+                    <img src="images/sikuliapi.png" /></button
+                ></a>
 
-                        <br /><br />
+                <br /><br />
 
-                        <strong>I utilized openCV with SikuliAPI in Python to create this <a
-                                href="https://github.com/williamuw/openCVClashRoyale/">Clash Royale Bot</a> for
-                            automating gameplay on an Android emulator. This is still a work in progress, however, the
-                            Python script is able to play the game perpetually without human supervision.
-                            <br>
-                            <br>
-                            <a href="https://youtu.be/R1FrA65R6hc">Click here if you would like to see the video
-                                documentation. (Youtube Link)
-                            </a>
-                        </strong>
-                    </li>
-                </ul>
+                <strong
+                  >I utilized openCV with SikuliAPI in Python to create this
+                  <a href="https://github.com/williamuw/openCVClashRoyale/"
+                    >Clash Royale Bot</a
+                  >
+                  for automating gameplay on an Android emulator. This is still
+                  a work in progress, however, the Python script is able to play
+                  the game perpetually without human supervision.
+                  <br />
+                  <br />
+                  <a href="https://youtu.be/R1FrA65R6hc"
+                    >Click here if you would like to see the video
+                    documentation. (Youtube Link)
+                  </a>
+                </strong>
+              </li>
+            </ul>
 
-                <h1 style="font-size: 2em">Please visit my <a href="https://github.com/williamuw">Github page</a> for a
-                    full list of my side projects.</h1>
-            </section>
+            <h1 style="font-size: 2em">
+              Please visit my
+              <a href="https://github.com/williamuw">Github page</a> for a full
+              list of my side projects.
+            </h1>
+          </section>
 
-
-
-
-
-
-
-
-
-
-
-            <!--
+          <!--
 <ul class="actions">
 <li><a href="generic.html" class="button">Learn More</a></li>
 </ul>
 -->
-            <!--
+          <!--
 </div>
 <span class="image"><img src="images/pic01.jpg" alt="" /></span>
 </div>
 -->
 
-
-
-
-            <!-- Get Started 
+          <!-- Get Started 
 <section id="cta" class="main special">
 <header class="major">
 <h1><em>"The real problem is what can man and machine do together and not in competition."</em></h1>
@@ -601,34 +695,42 @@ Dr. Richard Hamming
 
 </section> -->
 
-            <!-- Get Started -->
-            <section id="cta" class="main special">
-                <header class="major">
-                    <h1>Personal Interests/Hobbies</h1>
-                    <h2></h2>
+          <!-- Get Started -->
+          <section id="cta" class="main special">
+            <header class="major">
+              <h1>Personal Interests/Hobbies</h1>
+              <h2></h2>
 
+              <h4 style="font-size: 2em" align="left">
+                <ul>
+                  <li>
+                    I love building and restoring PCs as well as fixing all
+                    types of electronics around the house. 👨‍🔧
+                  </li>
+                  <li>
+                    I enjoy monitoring share prices, searching for undervalued
+                    companies, as well as trading stocks and options. 💹
+                  </li>
+                  <li>
+                    I love riding my bicycle and going on hikes to stay active.
+                    🚲🏔
+                  </li>
+                  <li>
+                    I am also a big fan of the musical Hamilton! &nbsp;🎶 <br />
+                    <em
+                      >You can ask me to rap any musical number from
+                      Hamilton</em
+                    >&nbsp;&nbsp;😄
+                  </li>
+                  <li>
+                    I love listening to music and watching classic movies during
+                    my spare time! 🎥🍿
+                  </li>
+                </ul>
+              </h4>
+            </header>
 
-                    <h4 style="font-size: 2em;" align="left">
-                        <ul>
-                            <li>I love building and restoring PCs as well as fixing all types of electronics around the
-                                house. 👨‍🔧</li>
-                            <li>I enjoy monitoring share prices, searching for undervalued companies, as well as trading
-                                stocks and options. 💹 </li>
-                            <li>I love riding my bicycle and going on hikes to stay active. 🚲🏔</li>
-                            <li>I am also a big fan of the musical Hamilton! &nbsp;🎶
-                                <br> <em>You can ask me to rap any musical number from Hamilton</em>&nbsp;&nbsp;😄
-                            </li>
-                            <li>I love listening to music and watching classic movies during my spare time! 🎥🍿</li>
-                        </ul>
-
-
-
-                    </h4>
-
-
-                </header>
-
-                <!-- <div>
+            <!-- <div>
                     <a href="https://github.com/williamuw"><img class="linked_images" src="images/github.png">
                     </a>
                     <a href="https://linkedin.com/in/williamuw"><img class="linked_images"
@@ -637,168 +739,177 @@ Dr. Richard Hamming
                     <a href="https://bn.william.w@gmail.com"><img class="linked_images" src="images/gmail.png">
                     </a>
                 </div> -->
-
-            </section>
-
+          </section>
         </div>
 
         <!-- Footer -->
         <footer id="footer">
+          <section>
+            <h1>
+              <em
+                >"The real problem is what can man and machine do together and
+                not in competition."</em
+              >
+            </h1>
+            <h3 style="font-size: 2em">- Dr. Richard Hamming</h3>
+          </section>
+          <blockquote>
             <section>
-                <h1><em>"The real problem is what can man and machine do together and not in competition."</em></h1>
-                <h3 style="font-size: 2em;">
-                    - Dr. Richard Hamming
-                </h3>
-
-            </section>
-            <blockquote>
-                <section>
-
-                    <h2>Contact Information</h2>
-                    <dl class="alt">
-                        <!--<dt>Address</dt>
+              <h2>Contact Information</h2>
+              <dl class="alt">
+                <!--<dt>Address</dt>
 <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd> 
 <dt>Phone</dt>
 <dd>(000) 000-0000 x 0000</dd>
 -->
-                        <dt>Email</dt>
-                        <dd><a href="bn.william.w@gmail.com">
-                                bn.william.w@gmail.com</a></dd>
-                        <dt><a href="https://github.com/williamuw" class="icon brands fa-github alt"><span
-                                    class="label">GitHub</span></a></dt>
-                        <dd><a href="https://github.com/williamuw">https://github.com/williamuw</a></dd>
-                        <br />
+                <dt>Email</dt>
+                <dd>
+                  <a href="bn.william.w@gmail.com"> bn.william.w@gmail.com</a>
+                </dd>
+                <dt>
+                  <a
+                    href="https://github.com/williamuw"
+                    class="icon brands fa-github alt"
+                    ><span class="label">GitHub</span></a
+                  >
+                </dt>
+                <dd>
+                  <a href="https://github.com/williamuw"
+                    >https://github.com/williamuw</a
+                  >
+                </dd>
+                <br />
 
-                        <dt><a href="https://www.linkedin.com/in/williamuw/" class="icon brands fa-linkedin alt"><span
-                                    class="label">Linkedin</span></a></dt>
-                        <dd><a href="https://www.linkedin.com/in/williamuw/">https://www.linkedin.com/in/williamuw/</a>
-                        </dd>
-
-
-                    </dl>
-                    <ul class="icons">
-                        <!--
+                <dt>
+                  <a
+                    href="https://www.linkedin.com/in/williamuw/"
+                    class="icon brands fa-linkedin alt"
+                    ><span class="label">Linkedin</span></a
+                  >
+                </dt>
+                <dd>
+                  <a href="https://www.linkedin.com/in/williamuw/"
+                    >https://www.linkedin.com/in/williamuw/</a
+                  >
+                </dd>
+              </dl>
+              <ul class="icons">
+                <!--
 <li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
 <li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
 <li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
 -->
+              </ul>
+            </section>
+          </blockquote>
 
-                    </ul>
-                </section>
-            </blockquote>
-
-            <h4 class="copyright">&copy; William Wang 2021. | All images belong to their respective owners. | Template:
-                <a href="https://html5up.net">HTML5 UP</a>.
-            </h4>
+          <h4 class="copyright">
+            &copy; William Wang 2021. | All images belong to their respective
+            owners. | Template: <a href="https://html5up.net">HTML5 UP</a>.
+          </h4>
         </footer>
-
-    </div>
-
-
+      </div>
+    </main>
 
     <!-- Scripts -->
 
     <script>
-        // Typing Tutorial Source: https://usefulangle.com/post/75/typing-effect-animation-javascript-css
+      // Typing Tutorial Source: https://usefulangle.com/post/75/typing-effect-animation-javascript-css
 
-        // List of sentences
-        var _CONTENT = [
-            "I am a Software Engineer. ",
-            "I am a Venture Capital Analyst. ",
-            "I am a CS student. ",
-            "I am an entrepreneur. ",
-            "I am always learning. "
-        ];
+      // List of sentences
+      var _CONTENT = [
+        "I am a Software Engineer. ",
+        "I am a Venture Capital Analyst. ",
+        "I am a CS student. ",
+        "I am an entrepreneur. ",
+        "I am always learning. ",
+      ];
 
-        var START_INDEX = 3;
-        var WAIT_INTERVAL = 1000;
-        var TYPE_VAL = 100;
-        var DELETE_VAL = 35;
+      var START_INDEX = 3;
+      var WAIT_INTERVAL = 1000;
+      var TYPE_VAL = 100;
+      var DELETE_VAL = 35;
 
-        // Current sentence being processed
-        var _PART = 0;
+      // Current sentence being processed
+      var _PART = 0;
 
-        // Character number of the current sentence being processed 
-        var _PART_INDEX = START_INDEX;
+      // Character number of the current sentence being processed
+      var _PART_INDEX = START_INDEX;
 
-        // Holds the handle returned from setInterval
-        var _INTERVAL_VAL;
+      // Holds the handle returned from setInterval
+      var _INTERVAL_VAL;
 
-        // Element that holds the text
-        var _ELEMENT = document.querySelector("#text");
+      // Element that holds the text
+      var _ELEMENT = document.querySelector("#text");
 
-        // Cursor element 
-        var _CURSOR = document.querySelector("#cursor");
+      // Cursor element
+      var _CURSOR = document.querySelector("#cursor");
 
-        // Implements typing effect
-        function Type() {
-            // Get substring with 1 characater added
-            var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
-            _ELEMENT.innerHTML = text;
-            _PART_INDEX++;
+      // Implements typing effect
+      function Type() {
+        // Get substring with 1 characater added
+        var text = _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX++;
 
-            // If full sentence has been displayed then start to delete the sentence after some time
-            if (text === _CONTENT[_PART]) {
-                emoji = "😃";
-                switch (_PART) {
-                    case 0:
-                        emoji = "💻";
-                        break;
-                    case 1:
-                        emoji = "🤝";
-                        break;
-                    case 2:
-                        emoji = "🏫";
-                        break;
-                    case 3:
-                        emoji = "🔨";
-                        break;
-                    case 4:
-                        emoji = "🙋‍♂️";
-                        break;
+        // If full sentence has been displayed then start to delete the sentence after some time
+        if (text === _CONTENT[_PART]) {
+          emoji = "😃";
+          switch (_PART) {
+            case 0:
+              emoji = "💻";
+              break;
+            case 1:
+              emoji = "🤝";
+              break;
+            case 2:
+              emoji = "🏫";
+              break;
+            case 3:
+              emoji = "🔨";
+              break;
+            case 4:
+              emoji = "🙋‍♂️";
+              break;
+          }
+          _ELEMENT.innerHTML = text + emoji;
+          // Hide the cursor
+          //_CURSOR.style.display = 'none';
 
-                }
-                _ELEMENT.innerHTML = text + emoji;
-                // Hide the cursor
-                //_CURSOR.style.display = 'none';
-
-                clearInterval(_INTERVAL_VAL);
-                setTimeout(function () {
-                    _INTERVAL_VAL = setInterval(Delete, DELETE_VAL);
-                }, WAIT_INTERVAL);
-            }
+          clearInterval(_INTERVAL_VAL);
+          setTimeout(function () {
+            _INTERVAL_VAL = setInterval(Delete, DELETE_VAL);
+          }, WAIT_INTERVAL);
         }
+      }
 
-        // Implements deleting effect
-        function Delete() {
-            // Get substring with 1 characater deleted
-            var text = _CONTENT[_PART].substring(0, _PART_INDEX - 1);
-            _ELEMENT.innerHTML = text;
-            _PART_INDEX--;
+      // Implements deleting effect
+      function Delete() {
+        // Get substring with 1 characater deleted
+        var text = _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX--;
 
-            // If sentence has been deleted then start to display the next sentence
-            if (text === 'I am') {
-                clearInterval(_INTERVAL_VAL);
+        // If sentence has been deleted then start to display the next sentence
+        if (text === "I am") {
+          clearInterval(_INTERVAL_VAL);
 
-                // If current sentence was last then display the first one, else move to the next
-                if (_PART == (_CONTENT.length - 1))
-                    _PART = 0;
-                else
-                    _PART++;
+          // If current sentence was last then display the first one, else move to the next
+          if (_PART == _CONTENT.length - 1) _PART = 0;
+          else _PART++;
 
-                _PART_INDEX = START_INDEX;
+          _PART_INDEX = START_INDEX;
 
-                // Start to display the next sentence after some time
-                setTimeout(function () {
-                    //_CURSOR.style.display = 'inline-block';
-                    _INTERVAL_VAL = setInterval(Type, TYPE_VAL);
-                }, 200);
-            }
+          // Start to display the next sentence after some time
+          setTimeout(function () {
+            //_CURSOR.style.display = 'inline-block';
+            _INTERVAL_VAL = setInterval(Type, TYPE_VAL);
+          }, 200);
         }
+      }
 
-        // Start the typing effect on load
-        _INTERVAL_VAL = setInterval(Type, 100);
-
+      // Start the typing effect on load
+      _INTERVAL_VAL = setInterval(Type, 100);
     </script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
@@ -808,6 +919,6 @@ Dr. Richard Hamming
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-</body>
-
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
