@@ -67,11 +67,11 @@ Array(200).fill().forEach(addStar);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load("/space.jpg");
+const spaceTexture = new THREE.TextureLoader().load("images/space.jpg");
 scene.background = spaceTexture;
 
-const williamTexture = new THREE.TextureLoader().load("/william.JPG");
-const waterlooTexture = new THREE.TextureLoader().load("/images/UW_seal.png");
+const williamTexture = new THREE.TextureLoader().load("images/william.JPG");
+const waterlooTexture = new THREE.TextureLoader().load("images/UW_seal.png");
 
 // Avatar
 
@@ -95,10 +95,10 @@ scene.add(william);
 william.position.z = -3;
 william.position.x = 0;
 
-const earthTexture = new THREE.TextureLoader().load("/earth.jpg");
-const normalTexture = new THREE.TextureLoader().load("/normal.jpg");
-const moonTexture = new THREE.TextureLoader().load("/moon.jpg");
-const marsTexture = new THREE.TextureLoader().load("/mars.jpg");
+const earthTexture = new THREE.TextureLoader().load("images/earth.jpg");
+const normalTexture = new THREE.TextureLoader().load("images/normal.jpg");
+const moonTexture = new THREE.TextureLoader().load("images/moon.jpg");
+const marsTexture = new THREE.TextureLoader().load("images/mars.jpg");
 
 const moon = new THREE.Mesh(
   new THREE.SphereGeometry(1, 32, 32),
