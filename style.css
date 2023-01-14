@@ -6,8 +6,15 @@ canvas {
   left: 0;
 }
 
-:root {
+model-viewer {
+  height: 1000px;
+  width: 1000px;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
 
+:root {
 }
 
 main {
