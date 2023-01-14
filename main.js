@@ -29,10 +29,10 @@ renderer.render(scene, camera);
 // Torus
 
 const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
+const material = new THREE.MeshStandardMaterial({ color: "purple" });
 const torus = new THREE.Mesh(geometry, material);
 
-scene.add(torus);
+// scene.add(torus);
 
 // Lights
 
@@ -96,7 +96,7 @@ william.position.z = -3;
 william.position.x = 0;
 
 const william2 = new THREE.Mesh(
-  new THREE.BoxGeometry(4, 4, 4),
+  new THREE.BoxGeometry(1, 1, 1),
   new THREE.MeshBasicMaterial({ map: williamTexture })
 );
 
@@ -106,7 +106,7 @@ william2.position.z = 0;
 william2.position.x = 0;
 
 const william3 = new THREE.Mesh(
-  new THREE.BoxGeometry(3, 3, 3),
+  new THREE.BoxGeometry(1, 1, 1),
   new THREE.MeshBasicMaterial({ map: williamTexture })
 );
 
@@ -115,31 +115,31 @@ scene.add(william3);
 william3.position.z = 5;
 william3.position.x = 2;
 
-// Moon
+// earth
 
-const moonTexture = new THREE.TextureLoader().load("moon.jpg");
+const earthTexture = new THREE.TextureLoader().load("earth.jpg");
 const normalTexture = new THREE.TextureLoader().load("normal.jpg");
 
-const moon = new THREE.Mesh(
+const earth = new THREE.Mesh(
   new THREE.SphereGeometry(3, 32, 32),
   new THREE.MeshStandardMaterial({
-    map: moonTexture,
-    normalMap: normalTexture,
+    map: earthTexture
   })
 );
 
-scene.add(moon);
+scene.add(earth);
 
-moon.position.z = 30;
-moon.position.setX(-10);
+earth.position.z = -5;
+earth.position.setX(-10);
+
 
 // Scroll Animation
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  // moon.rotation.x += 0.05;
-  // moon.rotation.y += 0.075;
-  // moon.rotation.z += 0.05;
+  // earth.rotation.x += 0.05;
+  // earth.rotation.y += 0.075;
+  // earth.rotation.z += 0.05;
 
   william.rotation.y += 0.01;
   william.rotation.z += 0.01;
@@ -170,7 +170,7 @@ function animate() {
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
 
-  moon.rotation.x += 0.005;
+  earth.rotation.y += 0.005;
 
   // controls.update();
 
