@@ -2,6 +2,8 @@ import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
+// 3JS Template Used
+
 // Setup
 
 const scene = new THREE.Scene();
@@ -20,7 +22,7 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.setZ(30);
-camera.position.setX(-3);
+camera.position.setX(0);
 
 renderer.render(scene, camera);
 
@@ -69,12 +71,13 @@ const spaceTexture = new THREE.TextureLoader().load("space.jpg");
 scene.background = spaceTexture;
 
 const williamTexture = new THREE.TextureLoader().load("william.JPG");
+const waterlooTexture = new THREE.TextureLoader().load("images/UW_seal.png");
 
 // Avatar
 
 const william4 = new THREE.Mesh(
-  new THREE.BoxGeometry(1, 1, 1),
-  new THREE.MeshBasicMaterial({ map: williamTexture })
+  new THREE.BoxGeometry(5, 5, 5),
+  new THREE.MeshBasicMaterial({ map: waterlooTexture })
 );
 
 scene.add(william4);
@@ -89,11 +92,11 @@ const william = new THREE.Mesh(
 
 scene.add(william);
 
-william.position.z = -5;
-william.position.x = -2;
+william.position.z = -3;
+william.position.x = 0;
 
 const william2 = new THREE.Mesh(
-  new THREE.BoxGeometry(2, 2, 2),
+  new THREE.BoxGeometry(4, 4, 4),
   new THREE.MeshBasicMaterial({ map: williamTexture })
 );
 
@@ -146,6 +149,9 @@ function moveCamera() {
 
   william3.rotation.y += 0.01;
   william3.rotation.z += 0.01;
+
+  william4.rotation.y -= 0.02;
+  william4.rotation.z -= 0.02;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
