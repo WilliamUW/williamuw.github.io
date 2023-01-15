@@ -92,8 +92,9 @@ const william = new THREE.Mesh(
 
 scene.add(william);
 
-william.position.z = -3;
-william.position.x = 0;
+william.position.z = -2.97;
+william.position.y = 0.17;
+william.position.x = -0.05;
 
 const earthTexture = new THREE.TextureLoader().load("/earth.jpg");
 const normalTexture = new THREE.TextureLoader().load("/normal.jpg");
