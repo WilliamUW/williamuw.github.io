@@ -110,15 +110,15 @@ scene.add(moon);
 moon.position.z = 0;
 moon.position.x = 0;
 
-const william3 = new THREE.Mesh(
+const mars = new THREE.Mesh(
   new THREE.SphereGeometry(10, 32, 32),
   new THREE.MeshBasicMaterial({ map: marsTexture, texture: normalTexture })
 );
 
-scene.add(william3);
+scene.add(mars);
 
-william3.position.z = -3;
-william3.position.x = 5;
+mars.position.z = -3;
+mars.position.x = 5;
 
 // earth
 
@@ -143,12 +143,6 @@ function moveCamera() {
   william.rotation.y += 0.01;
   william.rotation.z += 0.01;
 
-  moon.rotation.y += 0.01;
-  moon.rotation.z += 0.01;
-
-  william3.rotation.y += 0.01;
-  william3.rotation.z += 0.01;
-
   william4.rotation.y -= 0.02;
   william4.rotation.z -= 0.02;
 
@@ -169,9 +163,9 @@ function animate() {
   torus.rotation.y += 0.005;
   torus.rotation.z += 0.01;
 
-  earth.rotation.y += 0.005;
-
-  moon.rotation.y += 0.005;
+  earth.rotation.y += 0.002;
+  moon.rotation.y += 0.003;
+  mars.rotation.y += 0.001;
 
   // controls.update();
 
