@@ -75,15 +75,15 @@ const waterlooTexture = new THREE.TextureLoader().load("/UW_seal.png");
 
 // Avatar
 
-const william4 = new THREE.Mesh(
-  new THREE.BoxGeometry(5, 5, 5),
+const waterlooCube = new THREE.Mesh(
+  new THREE.BoxGeometry(7, 7, 7),
   new THREE.MeshBasicMaterial({ map: waterlooTexture })
 );
 
-scene.add(william4);
+scene.add(waterlooCube);
 
-william4.position.z = -10;
-william4.position.x = 4;
+waterlooCube.position.z = -15;
+waterlooCube.position.x = 10;
 
 const william = new THREE.Mesh(
   new THREE.BoxGeometry(1, 1, 1),
@@ -144,8 +144,8 @@ function moveCamera() {
   william.rotation.y += 0.01;
   william.rotation.z += 0.01;
 
-  william4.rotation.y -= 0.02;
-  william4.rotation.z -= 0.02;
+  waterlooCube.rotation.y -= 0.02;
+  waterlooCube.rotation.z -= 0.02;
 
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
