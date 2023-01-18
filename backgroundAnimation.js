@@ -92,9 +92,9 @@ const william = new THREE.Mesh(
 
 scene.add(william);
 
-william.position.z = -2.97;
+william.position.z = -2.94;
 william.position.y = 0.17;
-william.position.x = -0.05;
+william.position.x = -0.04;
 
 const earthTexture = new THREE.TextureLoader().load("/earth.jpg");
 const normalTexture = new THREE.TextureLoader().load("/normal.jpg");
@@ -141,8 +141,8 @@ function moveCamera() {
   // earth.rotation.y += 0.075;
   // earth.rotation.z += 0.05;
 
-  william.rotation.y += 0.01;
-  william.rotation.z += 0.01;
+  william.rotation.y = t * 0.01;
+  william.rotation.z = t * 0.01;
 
   waterlooCube.rotation.y -= 0.02;
   waterlooCube.rotation.z -= 0.02;
