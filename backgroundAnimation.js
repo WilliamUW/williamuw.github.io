@@ -70,7 +70,7 @@ function addStar() {
 const spaceTexture = new THREE.TextureLoader().load("/space.jpg");
 scene.background = spaceTexture;
 
-const williamTexture = new THREE.TextureLoader().load("/william.JPG");
+const williamTexture = new THREE.TextureLoader().load("/william.png");
 const waterlooTexture = new THREE.TextureLoader().load("/UW_seal.png");
 
 // Avatar
