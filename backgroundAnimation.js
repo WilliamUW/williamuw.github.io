@@ -108,7 +108,7 @@ const moon = new THREE.Mesh(
 
 scene.add(moon);
 
-moon.position.z = 2;
+moon.position.z = 3.5;
 moon.position.x = 0;
 
 const mars = new THREE.Mesh(
@@ -143,6 +143,8 @@ function moveCamera() {
 
   william.rotation.y = t * 0.003;
   william.rotation.z = t * 0.003;
+  william.position.y = 0.17 + t * -0.008;
+  william.position.x = -0.04 + t * 0.01;
 
   waterlooCube.rotation.y = t * -0.005;
   waterlooCube.rotation.z = t * -0.005;
